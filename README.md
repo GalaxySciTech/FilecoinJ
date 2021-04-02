@@ -24,6 +24,36 @@
 
 
 时间有限只整理了钱包交互的基本功能，希望可以供大家参考学习，为区块链技术增添一份力量。
+#### 引入本库
+
+gradle方式 在你的build.gradle里面
+
+```
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+    
+    dependencies {
+         implementation 'com.github.paipaipaipai:FilecoinJ:0.0.1'
+    }
+```
+
+maven方式
+
+```
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+	
+	<dependency>
+	    <groupId>com.github.paipaipaipai</groupId>
+	    <artifactId>FilecoinJ</artifactId>
+	    <version>0.0.1</version>
+	</dependency>
+```
 
 在springboot中使用很简单
 * 第一步配置节点信息
