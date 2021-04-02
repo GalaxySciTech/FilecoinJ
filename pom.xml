@@ -34,10 +34,16 @@
         </dependency>
 
         <dependency>
-            <groupId>ove</groupId>
-            <artifactId>ove.blake2b</artifactId>
-            <version>alpha.0</version>
+            <groupId>com.github.alphazero</groupId>
+            <artifactId>Blake2b</artifactId>
+            <version>bbf094983c</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>ove</groupId>-->
+<!--            <artifactId>ove.blake2b</artifactId>-->
+<!--            <version>alpha.0</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>co.nstant.in</groupId>
@@ -88,6 +94,13 @@
             <version>1.2.38</version>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
 
     <build>

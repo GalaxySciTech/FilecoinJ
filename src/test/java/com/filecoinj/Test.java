@@ -22,7 +22,7 @@ public class Test {
 
 
     public static void getMessageByCid(String cid) throws Exception {
-        String rs = filecoin.getMessageByCid(cid);
+        String rs = filecoin.getMessageByCid(cid).get_cid();
         System.out.println(rs);
     }
 
