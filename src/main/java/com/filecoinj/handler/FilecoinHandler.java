@@ -211,7 +211,7 @@ public class FilecoinHandler {
         //拼装交易参数
         Transaction transaction = Transaction.builder().from(send.getFrom())
                 .to(send.getTo())
-                .gasFeeCap(gas.getGasFeeCap())
+                .gasFeeCap(String.valueOf(Long.parseLong(gas.getGasFeeCap())*2))
                 .gasLimit(gas.getGasLimit().longValue() * 2)
                 .gasPremium(gas.getGasPremium())
                 .method(0L)
