@@ -16,4 +16,5 @@ import java.io.Serializable;
 public class WalletResult implements Serializable {
     private String address;
     private String privatekey;
+    private String originPrivateKey;
 }

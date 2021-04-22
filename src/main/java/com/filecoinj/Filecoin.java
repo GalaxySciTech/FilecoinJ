@@ -77,15 +77,6 @@ public class Filecoin {
     }
 
     /**
-     * 导入钱包
-     *
-     * @return WalletResult
-     */
-    public WalletResult importWallet(byte[] privatekey) throws WalletException {
-        return filcoinHandler.importWallet(privatekey);
-    }
-
-    /**
      * 转账
      *
      * @param transaction 参数
@@ -94,7 +85,7 @@ public class Filecoin {
      * @throws SendException    异常
      * @throws ExecuteException 异常
      */
-    public SendResult send(Transaction transaction, String privatekey) throws SendException, ExecuteException {
+    public SendResult send(Transaction transaction, String privatekey) throws SendException, ExecuteException, WalletException {
         return send(transaction, privatekey, FilecoinCnt.DEFAULT_TIMEOUT);
     }
 
@@ -108,7 +99,7 @@ public class Filecoin {
      * @throws SendException    异常
      * @throws ExecuteException 异常
      */
-    public SendResult send(Transaction transaction, String privatekey,int timeout) throws SendException, ExecuteException {
+    public SendResult send(Transaction transaction, String privatekey,int timeout) throws SendException, ExecuteException, WalletException {
         return filcoinHandler.send(transaction, privatekey,timeout);
     }
 
@@ -120,7 +111,7 @@ public class Filecoin {
      * @throws SendException    异常
      * @throws ExecuteException 异常
      */
-    public SendResult easySend(EasySend send) throws ParameException, ExecuteException,SendException {
+    public SendResult easySend(EasySend send) throws ParameException, ExecuteException, SendException, WalletException {
         return easySend(send,FilecoinCnt.DEFAULT_TIMEOUT);
     }
 
@@ -134,7 +125,7 @@ public class Filecoin {
      * @throws ExecuteException 异常
      * @throws ParameException
      */
-    public SendResult easySend(EasySend send,int timeout) throws ParameException, ExecuteException,SendException {
+    public SendResult easySend(EasySend send,int timeout) throws ParameException, ExecuteException, SendException, WalletException {
         return filcoinHandler.easySend(send,timeout);
     }
 
