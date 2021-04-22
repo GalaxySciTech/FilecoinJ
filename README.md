@@ -34,7 +34,7 @@ gradle方式 在你的build.gradle里面
     }
     
     dependencies {
-         implementation 'com.github.paipaipaipai:FilecoinJ:0.0.1'
+         implementation 'com.github.paipaipaipai:FilecoinJ:0.1.0'
     }
 ```
 
