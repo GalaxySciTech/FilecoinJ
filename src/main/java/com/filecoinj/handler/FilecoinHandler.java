@@ -85,7 +85,7 @@ public class FilecoinHandler {
         return WalletResult.builder().address(filAddress).privatekey(privatekey).originPrivateKey(originPrivateKey).build();
     }
 
-    private String convertToLotus(String originPrivateKey) throws WalletException {
+    public static String convertToLotus(String originPrivateKey) throws WalletException {
         try {
             String base64Key = Base64.encode(HexUtil.decodeHex(originPrivateKey));
             HashMap<String, String> map = new HashMap<>();
@@ -229,7 +229,7 @@ public class FilecoinHandler {
         Transaction transaction = Transaction.builder().from(send.getFrom())
                 .to(send.getTo())
                 .gasFeeCap(String.valueOf(Long.parseLong(gas.getGasFeeCap()) * 2))
-                .gasLimit(gas.getGasLimit().longValue() * 2)
+                .gasLimit(gas.getGasLimit().longValue())
                 .gasPremium(gas.getGasPremium())
                 .method(0L)
                 .nonce((long) nonce)
